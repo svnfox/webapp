@@ -9,6 +9,10 @@
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:svnfox/webapp.git"
+  },
   "dependencies": {
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
