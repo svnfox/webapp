@@ -1,4 +1,11 @@
-import Home from '../views/Home'
+// 原始引入方式
+// import Home from '../views/Home'
+
+// webpack提供的require.ensure()
+const Home = r => require.ensure([], () => r(require('../views/Home')), 'home')
+
+// es提案的import()
+const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue')
 
 const routes = [
   {
@@ -7,7 +14,7 @@ const routes = [
     beforeEnter: (to, from, next) => {
       next()
     },
-    component: () => import('../views/Home.vue'),
+    component: Home,
   },
   {
     path: '/about',
@@ -15,7 +22,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About'),
+    component: About,
   },
 ]
 
