@@ -2,16 +2,18 @@
 // import Home from '../views/Home'
 
 // webpack提供的require.ensure()
-const Home = r => require.ensure([], () => r(require('../views/Home')), 'home')
+const Home = (r: any) => require.ensure([], () => r(require('../views/Home')), 'home')
 
 // es提案的import()
-const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+const About = () => import(/* webpackChunkName: "about" */ '../views/About')
+
+const Debug = () => import(/* webpackChunkName: 'debug' */ '../views/debug')
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    beforeEnter: (to, from, next) => {
+    beforeEnter: (to: any, from: any, next: () => void) => {
       next()
     },
     component: Home,
@@ -23,6 +25,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: About,
+  },
+  {
+    path: '/debug',
+    name: 'debug',
+    component: Debug,
   },
 ]
 
