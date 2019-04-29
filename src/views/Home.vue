@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <!--    <HelloWorld ref="HelloWorld" msg="Welcome to Your Vue.js + TypeScript App"/>-->
   </div>
 </template>
 
@@ -11,11 +10,9 @@ import { Component, Provide, Vue } from 'vue-property-decorator'
 // import HelloWorld from '../views/debug'
 import UserInfo from '@/mixins/userInfo'
 
-// @Component({
-//   components: {
-//     HelloWorld,
-//   },
-// })
+@Component({
+  components: {},
+})
 export default class Home extends Vue {
   @Provide()
   obj: object = {

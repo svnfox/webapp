@@ -2,18 +2,18 @@
 // import Home from '../views/Home'
 
 // webpack提供的require.ensure()
-const Home = (r: any) => require.ensure([], () => r(require('../views/Home')), 'home')
+const Home = (r: any) => require.ensure([], () => r(require('../views/Home')), () => {}, 'home')
 
 // es提案的import()
-const About = () => import(/* webpackChunkName: "about" */ '../views/About')
+const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue')
 
-const Debug = () => import(/* webpackChunkName: 'debug' */ '../views/debug')
+const Debug = () => import(/* webpackChunkName: 'debug' */ '../views/debug/index.vue')
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    beforeEnter: (to: any, from: any, next: () => void) => {
+    beforeEnter: (to: object, from: object, next: () => void) => {
       next()
     },
     component: Home,
