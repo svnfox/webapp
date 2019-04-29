@@ -14,7 +14,7 @@ export default class HelloWorld extends Vue {
 
   beforeCreate() {}
   created() {
-    console.log()
+    console.log('hello')
   }
   beforeMount() {}
   mounted() {}
