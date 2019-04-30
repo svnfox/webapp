@@ -8,7 +8,7 @@
 import { Component, Provide, Prop, Vue } from 'vue-property-decorator'
 
 export default class About extends Vue {
-  aboutText: string = 'This is an about page'
+  aboutText: string = 'This is an about page dd'
 }
 </script>
 

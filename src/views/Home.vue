@@ -19,7 +19,7 @@ export default class Home extends Vue {
     name: 'xm',
     age: '22',
   }
-  @Provide() str: string = 'hello world'
+  @Provide() str: string = 'hello world cc'
   @Provide() num: number = 0
 
   // $ref: {
