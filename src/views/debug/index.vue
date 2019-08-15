@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>{{ msg2 }}</h2>
-    <Search label="i am a label from debug"></Search>
+    <Search label1="i am a label from debug" label2="bb3333"></Search>
   </div>
 </template>
 

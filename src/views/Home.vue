@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
+    {{ computedMsg }}
   </div>
 </template>
 
@@ -14,23 +15,22 @@ import UserInfo from '@/mixins/userInfo'
   components: {},
 })
 export default class Home extends Vue {
-  @Provide()
-  obj: object = {
+  private obj: object = {
     name: 'xm',
     age: '22',
   }
-  @Provide() str: string = 'hello world cc'
-  @Provide() num: number = 0
+  private str: string = 'hello world cc'
+  private num: number = 0
 
   // $ref: {
   //   HelloWorld
   // }
 
-  addTime(a: string): number {
+  public addTime(a: string): number {
     return this.num
   }
 
-  greated(): void {}
+  created(): void {}
 
   get computedMsg(): string {
     return 'hi' + this.str
