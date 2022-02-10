@@ -45,7 +45,7 @@
     "jest": "^24.7.1",
     "lint-staged": "^8.1.5",
     "mockjs": "^1.0.1-beta3",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.0.1",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5",
